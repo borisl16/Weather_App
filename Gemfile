@@ -29,6 +29,10 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '~> 1.11', '>= 1.11.1'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'devise', '~> 4.8', '>= 4.8.1'
+gem 'rest-client', '~> 2.1'
+gem 'json', '~> 2.6', '>= 2.6.1'
+gem 'http', '~> 5.0', '>= 5.0.4'
+gem 'dotenv', '~> 2.7', '>= 2.7.6'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
