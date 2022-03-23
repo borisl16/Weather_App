@@ -1,43 +1,64 @@
 
-<div class="row row-cols-1 row-cols-md-3 g-4">
+<div class="row row-cols-3 row-cols-md-3 g-4">
   <div class="col">
     <div class="card h-20">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
+    <%= render 'home/form_cities' %>
       <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-20">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-20">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
+        <small class="text-muted"><%= @city['current']['condition']['text'] %></small>
         
       </div>
+      <div class="card-body">
+        <h5 class="card-title"> <%= @city['location']['name'] %>  <%= @city['current']['temp_c']%>°C </h5>
+        <p class="card-text">
+        <%= @city['location']['region'] %> <br/>
+        <%= @city['location']['country'] %> <br/>
+        <%= @city['location']['localtime'] %> <br/></p>
+      </div>
+     <div class="card-footer text-center">
+        <small class="text-muted"><button type="button" class="btn btn-outline-secondary btn-sm">More details</button></small>
+      </div>
     </div>
   </div>
-  <div> <%= @city %> </div>
+  <div class="col">
+    <div class="card h-20">
+      <img src="<%= @city_1['current']['condition']['icon'] %>" class="card-img-top" alt="...">
+      <div class="card-footer">
+        <small class="text-muted"><%= @city_1['current']['condition']['text'] %></small>
+        
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"> <%= @city_1['location']['name'] %>  <%= @city_1['current']['temp_c']%>°C </h5>
+        <p class="card-text">
+        
+        <%= @city_1['location']['region'] %> <br/>
+        <%= @city_1['location']['country'] %> <br/>
+        <%= @city_1['location']['localtime'] %> <br/></p>
+      </div>
+      <div class="card-footer text-center">
+        <small class="text-muted"><button type="button" class="btn btn-outline-secondary btn-sm">More details</button></small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-20">
+      <img src="//cdn.weatherapi.com/weather/64x64/night/296.png" class="card-img-top" alt="...">
+      <div class="card-footer">
+        <small class="text-muted"><%= @city_2['current']['condition']['text'] %></small>
+        
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"> <%= @city_2['location']['name'] %>  <%= @city_2['current']['temp_c']%>°C </h5>
+         <p class="card-text">
+        <%= @city_2['location']['region'] %> <br/>
+        <%= @city_2['location']['country'] %> <br/>
+        <%= @city_2['location']['localtime'] %> <br/></p>
+      </div>
+     <div class="card-footer text-center">
+        <small class="text-muted"><button type="button" class="btn btn-outline-secondary btn-sm">More details</button></small>
+      </div>
+    </div>
+  </div>
+  
 </div>
 
 
